@@ -18,7 +18,7 @@
 
 set -e
 
-echo "Backup started: $(date)"
+echo $(date "+%Y/%m/%d %H:%M:%S")" Backup started: $(date)"
 
 BACKUP_TIME=`date "+%Y%m%d%H%M"`
 BACKUP_FOLDER=/tmp/$BACKUP_TIME
@@ -48,4 +48,4 @@ curl --header "PRIVATE-TOKEN: $BACKUP_GITLAB_ACCESS_TOKEN" --upload-file $BACKUP
 
 rm -rf $BACKUP_FOLDER 
 
-echo "Backup finished: $(date)"
+echo $(date "+%Y/%m/%d %H:%M:%S")" Backup finished"
