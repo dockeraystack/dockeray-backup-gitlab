@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM mariadb:10.3.17
+FROM mariadb:10.7.3
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 ADD backup.sh /backup.sh
